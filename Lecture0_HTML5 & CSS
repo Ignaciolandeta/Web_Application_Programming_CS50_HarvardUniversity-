@@ -1,1 +1,163 @@
+https://www.youtube.com/watch?v=zFZrkCIc2Oc&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&index=2
+
+<!HTML5 TITLE, BODY & HEADINGS;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <h1>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</h1>
+        <h2>this is a smaller heading h2...</h2>
+        <h6>this is the smallest heading in HTML5, h6...</h6>
+    </body>
+</html>
+
+
+
+
+
+
+<!HTML5 LISTS;>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <p>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</p>
+        An unordered list (bullet points):
+        <ul>
+            <li>First unordered list item</li>
+            <li>Second unordered list item</li>
+            <li>Third unordered list item</li>
+        </ul>
+
+        An ordered list (numbers):
+        <ol>
+            <li>First ordered list item</li>
+            <li>Second ordered list item</li>
+            <li>Third ordered list item</li>
+        </ol>
+
+    </body>
+</html>
+
+
+
+
+
+<!HTML5 IMAGES;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <P>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</P>
+        <img src="ignacio.jpg" alt="Ignacio Landeta" width="190">
+    </body>
+</html>
+
+
+
+
+
+<!HTML5 LINKS;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <p>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</p>
+        <p><a href="https://ar.linkedin.com/in/ignacio-landeta-08b05834">Click here to visit my personal Linkedin</a></p>
+        <a href="image.html">Click here to se my profile photo</a>
+    </body>
+</html>
+
+
+
+
+<!HTML5 TABLES;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <p>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>row 1 data 1</td>
+                    <td>row 1 data 2</td>
+                    <td>row 1 data 3</td>
+                </tr>
+                <tr>
+                    <td>row 2 data 1</td>
+                    <td>row 2 data 2</td>
+                    <td>row 2 data 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+
+
+
+<!HTML5 FORMS & DATALISTS;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+    </head>
+    <body>
+        <p>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</p>
+        <form>
+
+            <div>
+                <input name="Name" type="text" placeholder="Name">
+                <input name="Password" type="password" placeholder="Password"> 
+            </div>
+
+            <div>
+                <input name="color" type="radio" value="red"> Red
+                <input name="color" type="radio" value="green"> Green
+                <input name="color" type="radio" value="blue"> Blue
+                <input name="color" type="radio" value="other"> Other
+            </div>
+
+            <div>
+                <input name="country" list="countries" placeholder="Country">
+                <datalist id="countries">
+                    <option value="Argentina">
+                    <option value="Albania">
+                    <option value="Angola">
+                    <option value="Bulgaria">
+                    <option value="other country...">
+                    </option>
+                </datalist>
+            </div>
+
+        </form>
+    </body>
+</html>
+
+
 
