@@ -161,3 +161,131 @@ https://www.youtube.com/watch?v=zFZrkCIc2Oc&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5
 
 
 
+
+
+
+
+
+<!CSS3 STYLE HREF;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body >
+        <h1>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</h1>
+        <h1>This is a second heading</h1>
+        Welcome to my page
+    </body>
+</html>
+
+
+
+
+
+
+<!CSS3 SIZE;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Size- Ignacio Landeta_s Web Page</title>
+        <style>
+            div { 
+                background-color: orange;
+                width: 200px;
+                height: 200px;
+                padding: 20px;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!
+        </div>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+<!CSS3 FONT;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Font - Ignacio Landeta_s Web Page</title>
+        <style>
+            div {
+                border: 3px solid black;
+                font-family: Arial, sans-serif;
+                font-size: 28px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body >
+        <div>
+            Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!
+        </div>
+        Some more text....
+    </body>
+</html>
+
+
+
+
+
+
+
+<!CSS3 TABLE STYLE;>
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ignacio Landeta_s Web Page</title>
+        <style>
+            table {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            td, th {
+                border: 1px solid black;
+                padding: 5px;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <p>Hello, World! my name is Ignacio Landeta and this is my Web App Programming from scratch. Welcome!</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>row 1 data 1</td>
+                    <td>row 1 data 2</td>
+                    <td>row 1 data 3</td>
+                </tr>
+                <tr>
+                    <td>row 2 data 1</td>
+                    <td>row 2 data 2</td>
+                    <td>row 2 data 3</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
