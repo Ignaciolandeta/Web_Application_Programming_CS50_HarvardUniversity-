@@ -4,7 +4,7 @@ As CS50 Project0 assignment, I had to design a front-end for Google Search, Goog
 here are the specification;
 https://cs50.harvard.edu/web/2020/projects/0/search/
 
-# URL of a short video demonstrating my implementation of Project 0: Search
+URL of a short video demonstrating my implementation of Project 0: Search
 This video show my application live, in action, and demonstrate that every feature required by the specification has been implemented;
 https://www.youtube.com/watch?v=PPuHjUaOIWU
 
