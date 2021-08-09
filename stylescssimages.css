@@ -1,0 +1,30 @@
+#image {
+    margin-top: 121px;
+    margin-left: 401px;
+}
+#text {
+    width: 451px;
+    height: 31px;
+    margin-top: 21  px;
+    margin-left: 401px;
+    border-color:azure;
+    border-radius: 21px;
+}
+#button {
+    width: auto;
+    height: auto;
+    margin-top: 31px;
+    margin-left: 551px;
+    background-color:white;
+    border-color: white;
+}
+#button:hover {
+    background-color:white;
+    border: black;
+}
+#search {
+    width: auto;
+    height: auto;
+    margin-left: 1100px;
+    margin-top: 21px;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+        <style>
+            #search1 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 116px;
+            }
+            #search2 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 51px;
+            }
+            #search3 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 91px;
+            }
+            #search4 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 81px;
+            }
+            #submit {
+                margin-top: 50px;
+                margin-left: 230px;
+                color:white;
+                background-color:dodgerblue;
+                border-color: dodgerblue;
+            }
+            #search {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 21px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a id="search" href="index.html">go to Google Search</a>
+        </div>
+        <img src="https://s3.amazonaws.com/images.seroundtable.com/google-advanced-search-1374149430.png">
+        <form action="https://google.com/search">
+            <!--GET parameters for Advanced Search URL https://www.google.com/search?as_q="value1"&as_epq="value2"&as_oq="value3"&as_eq="value4"-->
+            <div>
+                all these words:
+                <input id="search1" type="text" name="q">    
+            </div>
+            <div>
+                this exact word or phrase:
+                <input id="search2" type="text" name="as_epq">
+            </div>
+            <div>
+                any of these words:
+                <input id="search3" type="text" name="as_oq">
+            </div>
+            <div>
+                none of these words:
+                <input id="search4" type="text" name="as_eq">
+            </div>
+            <div>
+                <input id="submit" type="submit" value="Google Advanced Search">
+            </div>
+            
+        </form>
+    
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Images</title>
+        <!--CSS file href-->
+        <link rel="stylesheet" href="stylescssimages.css">
+    </head>
+    <body>
+        <div>
+            <a id="search" href="index.html">go to Google Search</a>
+        </div>
+        <img id="image" src="https://th.bing.com/th/id/OIP.mmMQBzKG5G5U9w6BDL_fvwHaBY?pid=ImgDet&rs=1">
+        
+        <form action="https://google.com/search">
+            <div>
+                <input id="text" type="text" name="q">
+                <!--Add hidden GET parameter "&tbm=isch" for the image search URL https://www.google.com/search?q="QUERY"&tbm=isch -->
+                <input type="hidden" name="tbm" value="isch">
+                <input id="button" type="submit" value="Google Image Search">
+                
+            </div>             
+        </form>
+    
+    </body>
+</html>

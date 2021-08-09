@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Search</title>
+        <style>
+            #image {
+                margin-top: 41px;
+                margin-left: 201px;
+            }
+            #text {
+                width: 451px;
+                height: 31px;
+                margin-top: 21  px;
+                margin-left: 401px;
+                border-color:azure;
+                border-radius: 21px;
+            }
+            #button {
+                width: auto;
+                height: auto;
+                margin-top: 31px;
+                margin-left: 501px;
+                background-color:white;
+                border-color: white;
+            }
+            #button:hover {
+                background-color:white;
+                border: black;
+            }
+            #button2 {
+                width: auto;
+                height: auto;
+                margin-top: 31px;
+                margin-left: 51px;
+                background-color:white;
+                border-color: white;
+            }
+            #button2:hover {
+                background-color:white;
+                border: black;
+            }
+            #imagesearch {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 16px;
+            }
+            #advanced {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 21px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <a id="imagesearch" href="indeximages.html">go to Image Search</a>
+            <a id="advanced" href="indexadvanced.html">go to Advanced Search</a>
+        </div>
+        <img id="image" src="https://www.google.com/logos/doodles/2021/grandparents-day-2021-july-26-6753651837108998-2xa.gif">
+        
+        <form action="https://google.com/search">
+            <div>
+                <input id="text" type="text" name="q">
+                <input id="button" type="submit" value="Google Search">
+                <!--GET parameter "&btnI" for the "Im feeling lucky" button URL http://www.google.com/search?q="QUERY"&btnI -->
+                <input id="button2" type="submit" name="btnI" value="I'm feeling lucky">
+            </div>             
+        </form>
+    </body>
+</html>
