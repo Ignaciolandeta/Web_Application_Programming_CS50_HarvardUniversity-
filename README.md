@@ -1,5 +1,4 @@
 # Web_Application_Programming_CS50_HarvardUniversity-
-Web_Application_Programming_CS50_HarvardUniversity
 
 As CS50 Project0 assignment, I had to design a front-end for Google Search, Google Image Search, and Google Advanced Search.
 here are the specification;
