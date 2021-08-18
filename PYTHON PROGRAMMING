@@ -1,0 +1,362 @@
+please view my Youtube channel https://www.youtube.com/watch?v=o82-NoPSe6U
+
+from lecture CS50 HARVARD https://www.youtube.com/watch?v=EOLPQdVj5Ac&list=PLhQjrBD2T380xvFSUmToMMzERZ3qB5Ueu&index=4
+
+
+#HELLO
+print("Hello World! My name is Ignacio Landeta, this is my Python programming lecture")
+
+
+
+
+#STRINGS
+name = input("Name: ")
+print("Hello, " + name)
+
+name = input("Name: ")
+print(f"Hello, {name}")
+
+
+#LISTS
+#Define a "LIST" of names
+names = ["Harry", "Ron", "Hermione", "Ginny"]
+
+print(names)
+
+
+#Indicate an element from a "LIST" of names
+names = ["Harry", "Ron", "Hermione", "Ginny"]
+
+print(names[0])
+
+
+#Lists are "mutable" so we can add an element to the end of the list by ".append" command
+names.append("Draco")
+print(names)
+
+#Sort the List (in this case alphabeticaly) by ".sort" command
+names.sort()
+print(names)
+
+
+
+
+
+
+
+
+#SETs
+#Create an empty "SET"
+s = set()
+
+#Add elements to SET;
+s.add(1)
+s.add(2)
+s.add(3)
+s.add(4)
+#inside a SET never the same element appreare more than once;
+s.add(3)
+
+print(s)
+
+#remove elements from the SET;
+s.remove(2)
+print(s)
+
+#Length of a sequence;
+print(f"The set has {len(s)} elements")
+
+
+
+
+
+#DICTIONARIES
+houses = {"Harry": "Buenos Aires", "Draco": "Jujuy"}
+
+houses["Jack"] = "Cordoba" 
+
+print(houses["Draco"])
+print(houses["Jack"])
+
+
+
+
+#CONDITIONS
+n = int(input("Number: "))
+
+if n > 0:
+    print("n is positive")
+elif n < 0:
+    print("n is negative")
+else:
+    print("n zero")
+    
+    
+    
+    
+#SEQUENCES & TUPLES
+#Sequences1
+name = "Ignacio"
+
+print(name[0])
+
+
+
+#Sequences2
+names = ["Harry", "Ron", "Hermonie"]
+
+print(names)
+
+#Sequences3
+names = ["Harry", "Ron", "Hermonie"]
+
+print(names[0])
+
+
+#Tuples
+coordinateX = 10.0
+coordinateY = 20.0
+
+coordinate = (10.0, 20.0)
+
+print(coordinateX)
+print(coordinateY)
+print(coordinate)
+
+
+
+
+
+
+
+#FUNCTIONS "def"
+def square(x):
+    return x*x
+
+
+for i in range(10):
+    print(f"The square {i} is {square(i)}")
+    
+    
+#import a Function from another .py file. Option 1
+from functions import square
+
+for i in range(10):
+    print(f"The square {i} is {square(i)}")
+
+
+
+#import a Function from another .py file. Option 2
+import functions
+
+for i in range(10):
+    print(f"The square {i} is {functions.square(i)}")
+        
+    
+#Lambda function
+people = [
+    {"name": "Harry", "house": "Gryff"},
+    {"name": "Cho", "house": "Raven"},
+    {"name": "Draco", "house": "Slyt"}
+]
+
+people.sort(key=lambda person: person["name"])
+print(people)
+
+
+
+
+
+
+#LOOPS
+#a simple LOOP
+for i in [0, 1, 2, 3, 4, 5]:
+    print(i)
+
+
+#a RANGE of numbers (from 0 to X...)
+for i in range(10):
+    print(i)
+
+
+#range of Names;
+names = ["Harry", "Ron", "Hermione"]
+
+for name in names:
+    print(name)
+
+#characters;
+name = "Harry"
+
+for character in name:
+    print(character)
+
+
+
+
+
+
+
+
+
+#OOP
+#Object-oriented programming = Class + attributes + methods
+
+class Point():
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+p = Point(2, 8)
+print(p.x)
+print(p.y)
+
+
+
+#Object-oriented programming example 2
+
+class Person:
+    def __init__(self, age, weight, height, first_name, last_name, catch_phrase):
+        self.age = age
+        self.weight = weight
+        self.height = height
+        self.first_name = first_name
+        self.last_name = last_name
+        self.catch_phrase = catch_phrase
+
+    def walk(self):
+        print("Walking...")
+    
+    def run(self):
+        print("Running...")
+
+user = Person(20, 75, 175, "Jhon", "MkClure", "Hello! Jhon")
+print(user.catch_phrase)
+
+user.walk()
+user.run()
+
+
+
+
+#Object-oriented programming example 3
+
+class Bottle:
+    def __init__(self, volume, type_):
+        self.volume = volume
+        self.type_ = type_
+
+    def pour(self):
+        print("Pouring...")
+
+    def fill(self):
+        print("Filling...")
+
+    def recycle(self):
+        print("Recycling...")
+
+b = Bottle(330, 1)
+print(b.volume)
+print(b.type_)
+
+b.pour()
+b.fill()
+b.recycle()
+
+
+
+
+#Object-oriented programming example 4: this is a program for an airline where the airline needs to keep track of booking passengers on a flight and making sure that no flight is overbooked. We don´t want more passengers on the flight than there is capacity on the flight
+class Flight:
+    def __init__(self, capacity):
+        self.capacity = capacity
+        self.passengers = []
+
+    def add_passenger(self, name):
+        if not self.open_seats:
+            return False
+        self.passengers.append(name)
+        return True
+
+    def open_seats(self):
+        return self.capacity - len(self.passengers)
+
+
+flight = Flight(3)
+
+people = ["Harry", "Ron", "Jhon", "Ginny"]
+for person in people:
+    success = flight.add_passenger(person)
+    if success:
+        print(f"Added {person} to flight successfuly.")
+    else:
+        print(f"Not available seats for {person}")
+        
+        
+        
+ 
+
+
+
+
+#DECORATORS
+#Functional programming = Decorators "@" --> taking a function as input, modifying that function (nested functions, creating a function inside another function), and return that modified function as output.
+
+def announce(f):
+    def wrapper():
+        print("About to run the function...")
+        f()
+        print("Done with the function.")
+    return wrapper
+
+@announce
+def Hello():
+    print("Hello World! My name is Ignacio Landeta")
+
+Hello()
+
+
+
+
+#Functional programming = Decorators "@" example #2: make a decorator that checks not allowing divide by 0
+
+def check(f):
+    def inside(a, b):
+        if b == 0:
+            print("Can´t divide by 0, try another number please")
+            return
+        f(a,b)
+    return inside
+
+@check     #this @decorator would be the same that definyng a varaible like "div = ckeck(div)"
+def div(a, b):
+    return a / b
+
+print(div(10, 0))
+
+
+
+
+
+
+
+
+#EXCEPTIONS
+#Traceback exceptions handling (try & except): this is a program that finish and exit when trying to divide by 0 or input something that is not an integer number:
+
+import sys
+
+try:
+    x = int(input("x: "))
+    y = int(input("y: "))
+except:
+    print("Error: invalid input, please use numbers only")
+    sys.exit(1)
+
+try:
+    result = x/y
+except ZeroDivisionError:
+    print("Error: cannot divide by 0")
+    sys.exit(1)
+
+print(f"{x} / {y} = {result}")
