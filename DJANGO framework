@@ -1,0 +1,149 @@
+#URLs.PY - PROJECT URLs CONFIGURATION:
+URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.2/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django import urls
+from django.contrib import admin
+from django.urls import path
+from django.urls.conf import include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('hello/', include("hello.urls")),
+    path('tasks/', include("tasks.urls")),
+    path('newyear/', include("newyear.urls"))
+]
+
+
+
+
+
+
+
+#APP-1: "HELLO" 
+#VIEWS.PY
+
+from django.http import HttpResponse
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    
+    #Option1: render just a string;
+    #return HttpResponse("Hello!!!!! i am Ignacio from Argentina, this is my django web app runing in server, welcome!")
+    
+    #Option2: render an entire Html file template;
+    return render(request, "hello/index.html")
+
+def stranger(request):
+    return HttpResponse("Hello stranger visitor!")
+
+def client(request):
+    return HttpResponse("Hello client!")
+
+def greet(request, name):
+    #option1: render just a string;
+    #return HttpResponse(f"Hello! {name.capitalize()}")
+
+    #Option2: render an entire page with some additional content for example a dictionary;
+    return render(request, "hello/greet.html", {
+        "name": name.capitalize()
+    })
+    
+    
+#URLs.PY
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index"),
+    path("<str:name>", views.greet, name="greet"),
+    path("stranger", views.stranger, name="stranger"),
+    path("client", views.client, name="client")
+    
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+#APP-2: "NEWYEAR"
+#VIEWS.PY
+
+import datetime
+
+from django.shortcuts import render
+
+# Create your views here.
+def index(request):
+    now = datetime.datetime.now()
+    return render(request, "newyear/index.html", {
+        "newyear": now.month == 1 and now.day == 1
+    })
+
+#URLs.PY
+from django.urls.resolvers import URLPattern
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index")
+]
+
+
+
+
+
+
+
+
+
+
+#APP-3: "TASKS SCHEDULE"
+#VIEWS.PY
+import tasks
+from django.shortcuts import render
+
+tasks = ["task1", "task2", "task2"]
+
+# Create your views here.
+def index(request):
+    return render(request, "tasks/index.html", {
+        "tasks": tasks 
+    })
+
+def add(request):
+    return render(request, "tasks/add.html", {
+    })
+
+
+#URLs.PY
+from django.urls import path
+
+from . import views
+
+urlpatterns = [
+    path("", views.index, name="index"),
+    path("add", views.add, name="add")
+]
