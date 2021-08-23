@@ -32,11 +32,7 @@ urlpatterns = [
 
 
 
-
-
-
-
-#APP-1: "HELLO" 
+#APP-1: "HELLO" --> THIS APP HAS the ability to be able to generate programmatically custom HTML and CSS, saying hello to a person's name based on what name is provided inside of URL
 #VIEWS.PY
 
 from django.http import HttpResponse
@@ -87,12 +83,7 @@ urlpatterns = [
 
 
 
-
-
-
-
-
-#APP-2: "NEWYEAR"
+#APP-2: "NEWYEAR" --> This app has the ability to check the current date and conditionally display something if the date is one thing versus another, in this case checks if it is or not "New Year"
 #VIEWS.PY
 
 import datetime
@@ -122,31 +113,61 @@ urlpatterns = [
 
 
 
-
-
-#APP-3: "TASKS SCHEDULE"
+#APP-3: "TASKS LIST" --> This app has the ability to store data on a session basis, to be able to store information about a user's to do list, for example, such that on subsequent visits, they can see their list of things they need to do with a different list for each of these possible users (here Django gets very powerful when it comes storing data inside of databases);
 #VIEWS.PY
+
+from django import forms
+from django.http.response import HttpResponseRedirect
+from django.urls.base import reverse
+
 import tasks
 from django.shortcuts import render
 
-tasks = ["task1", "task2", "task2"]
+#Option1 defining a list of tasks; tasks = ["task1", "task2", "task3"]
+
+
+class NewTaskForm(forms.Form):
+    task = forms.CharField(label="New Task")
+    #client-side validation;
+    priority = forms.IntegerField(label="Priority", min_value=1, max_value=5)
+
 
 # Create your views here.
 def index(request):
+    if "tasks" not in request.session:
+        request.session["tasks"] = []
+
     return render(request, "tasks/index.html", {
-        "tasks": tasks 
+        "tasks": request.session["tasks"]
     })
 
 def add(request):
+    # server-side validation algorithm;
+    if request.method == "POST":
+            form = NewTaskForm(request.POST)
+            if form.is_valid():      
+                task = form.cleaned_data["task"]
+                #private-session in browser;
+                request.session["tasks"] += [task]
+                #redirect;
+                return HttpResponseRedirect(reverse("tasks:index"))
+
+            else:
+                return render(request, "task/add.html", {
+                    "form":form
+                })
+
     return render(request, "tasks/add.html", {
+        "form": NewTaskForm
     })
-
-
+    
+    
 #URLs.PY
-from django.urls import path
+    from django.urls import path
 
 from . import views
 
+app_name = "tasks"
 urlpatterns = [
     path("", views.index, name="index"),
     path("add", views.add, name="add")
