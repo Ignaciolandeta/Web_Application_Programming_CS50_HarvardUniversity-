@@ -1,0 +1,222 @@
+#Final Product: https://www.youtube.com/watch?v=PPuHjUaOIWU
+
+#Specifications: https://cs50.harvard.edu/web/2020/projects/0/search/
+#I´ve Designed an HTML5 front-end for Google Search, Google Image Search, and Google Advanced Search clone page. The CSS3 should match Google’s own aesthetics as best as possible.
+
+
+#INDEX.HTML --> GOOGLE SEARCH CLONE PAGE;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Search</title>
+        <style>
+            #image {
+                margin-top: 41px;
+                margin-left: 201px;
+            }
+            #text {
+                width: 451px;
+                height: 31px;
+                margin-top: 21  px;
+                margin-left: 401px;
+                border-color:azure;
+                border-radius: 21px;
+            }
+            #button {
+                width: auto;
+                height: auto;
+                margin-top: 31px;
+                margin-left: 501px;
+                background-color:white;
+                border-color: white;
+            }
+            #button:hover {
+                background-color:white;
+                border: black;
+            }
+            #button2 {
+                width: auto;
+                height: auto;
+                margin-top: 31px;
+                margin-left: 51px;
+                background-color:white;
+                border-color: white;
+            }
+            #button2:hover {
+                background-color:white;
+                border: black;
+            }
+            #imagesearch {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 16px;
+            }
+            #advanced {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 21px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <a id="imagesearch" href="indeximages.html">go to Image Search</a>
+            <a id="advanced" href="indexadvanced.html">go to Advanced Search</a>
+        </div>
+        <img id="image" src="https://www.google.com/logos/doodles/2021/grandparents-day-2021-july-26-6753651837108998-2xa.gif">
+        
+        <form action="https://google.com/search">
+            <div>
+                <input id="text" type="text" name="q">
+                <input id="button" type="submit" value="Google Search">
+                <!--GET parameter "&btnI" for the "Im feeling lucky" button URL http://www.google.com/search?q="QUERY"&btnI -->
+                <input id="button2" type="submit" name="btnI" value="I'm feeling lucky">
+            </div>             
+        </form>
+    </body>
+    
+    
+    
+#INDEXIMAGE.HTML --> GOOGLE IMAGE SEARCH CLONE PAGE;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Images</title>
+        <!--CSS file href-->
+        <link rel="stylesheet" href="stylescssimages.css">
+    </head>
+    <body>
+        <div>
+            <a id="search" href="index.html">go to Google Search</a>
+        </div>
+        <img id="image" src="https://th.bing.com/th/id/OIP.mmMQBzKG5G5U9w6BDL_fvwHaBY?pid=ImgDet&rs=1">
+        
+        <form action="https://google.com/search">
+            <div>
+                <input id="text" type="text" name="q">
+                <!--Add hidden GET parameter "&tbm=isch" for the image search URL https://www.google.com/search?q="QUERY"&tbm=isch -->
+                <input type="hidden" name="tbm" value="isch">
+                <input id="button" type="submit" value="Google Image Search">
+                
+            </div>             
+        </form>
+    
+    </body>
+</html>
+
+#STYLESCSSIMAGES.CSS --> CSS STYLESHEET FOR GOOGLE IMAGE SEARCH CLONE PAGE ABOVE;
+
+#image {
+    margin-top: 121px;
+    margin-left: 401px;
+}
+#text {
+    width: 451px;
+    height: 31px;
+    margin-top: 21  px;
+    margin-left: 401px;
+    border-color:azure;
+    border-radius: 21px;
+}
+#button {
+    width: auto;
+    height: auto;
+    margin-top: 31px;
+    margin-left: 551px;
+    background-color:white;
+    border-color: white;
+}
+#button:hover {
+    background-color:white;
+    border: black;
+}
+#search {
+    width: auto;
+    height: auto;
+    margin-left: 1100px;
+    margin-top: 21px;
+}
+
+
+
+
+
+
+#INDEXADVANCED.HTML --> GOOGLE ADVANCED SEARCH CLONE PAGE;
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Google Advanced Search</title>
+        <style>
+            #search1 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 116px;
+            }
+            #search2 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 51px;
+            }
+            #search3 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 91px;
+            }
+            #search4 {
+                border-color: lightblue;
+                margin-top: 36px;
+                margin-left: 81px;
+            }
+            #submit {
+                margin-top: 50px;
+                margin-left: 230px;
+                color:white;
+                background-color:dodgerblue;
+                border-color: dodgerblue;
+            }
+            #search {
+                width: auto;
+                height: auto;
+                margin-left: 1100px;
+                margin-top: 21px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <a id="search" href="index.html">go to Google Search</a>
+        </div>
+        <img src="https://s3.amazonaws.com/images.seroundtable.com/google-advanced-search-1374149430.png">
+        <form action="https://google.com/search">
+            <!--GET parameters for Advanced Search URL https://www.google.com/search?as_q="value1"&as_epq="value2"&as_oq="value3"&as_eq="value4"-->
+            <div>
+                all these words:
+                <input id="search1" type="text" name="q">    
+            </div>
+            <div>
+                this exact word or phrase:
+                <input id="search2" type="text" name="as_epq">
+            </div>
+            <div>
+                any of these words:
+                <input id="search3" type="text" name="as_oq">
+            </div>
+            <div>
+                none of these words:
+                <input id="search4" type="text" name="as_eq">
+            </div>
+            <div>
+                <input id="submit" type="submit" value="Google Advanced Search">
+            </div>
+            
+        </form>
+    
+    </body>
+</html>
